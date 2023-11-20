@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tukki ticketing system">
+  <meta property="og:description" content="Diginet project, University of Oulu">
+  <meta property="og:image" content="assets/images/tukki-en//lista.png">
+
+  <title>Tukki ticketing system</title>
+  <meta name="description" content="Diginet project, University of Oulu">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Portfolio</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="front-end-for-tukki-ticketing-system">Front-end for Tukki ticketing system</h1>
+
+<p><a href="1-tukki.html">This documentation in finnish</a></p>
+
+<p>This is presentation of the frontend for the Tukki ticketing system I was
+implementing for the Diginet -project. It has been implemented with
+<a href="https://angular.io/">Angular</a>. Other technical documentation about interface
+I’ve made can be found in the file <a href="documentation/kuvaus/description.md">documentation/kuvaus/description.md</a>.
+Techical documentation created with Compodoc is in file <a href="documentation/index.html">documentation/index.html</a>.</p>
+
+<p>First, is useful to define what was the scope I did and what was done by others:</p>
+
+<h2 id="things-ive-done-for-the-frontend">Things I’ve done for the frontend</h2>
+
+<ul>
+  <li>Frontend architechture.</li>
+  <li>Most of the implementation.</li>
+  <li>Technical documentation.</li>
+  <li>Almost all unit tests.</li>
+</ul>
+
+<h2 id="things-done-my-team-mates">Things done my team mates</h2>
+
+<ul>
+  <li>Application functionality- and interface design.</li>
+  <li>Some parts of the frontend: rich text editor, make a FAQ from question,
+profile view, additional fields in question views, privacy statement content.</li>
+</ul>
+
+<h2 id="demonstration-of-implementation">Demonstration of implementation</h2>
+
+<p><img src="assets/images/tukki-en/lista.png" alt="kysymyslista" /></p>
+
+<p>The list of questions is the main view of the application. Here is the view used
+outside the Moodle upload. When logged in as a teacher, you can see all the
+questions asked to teachers in the course. The table is made using the Angular
+Material library. The rows can be sorted by different columns and filtered by
+the information contained in the different questions. The content of the table
+is updated periodically or manually.</p>
+
+<p><img src="src/assets/screenshots/lista.png" alt="kysymyslista" /></p>
+
+<p><img src="assets/images/tukki-en/valikko.png" alt="kysymyslista" /></p>
+
+<p>You can change the language used in the app to Finnish</p>
+
+<p><img src="assets/images/tukki-en/login.png" alt="kysymyslista" /></p>
+
+<p>The system can be logged in manually with a login and password when used outside
+the Moodle upload.</p>
+
+<p><img src="assets/images/tukki-en/tiketti.png" alt="kysymys" /></p>
+
+<p>In the individual question view, the user can view the information about the
+question. The teacher can set the question as resolved and the sender of the
+question can remove or edit it. Teachers and students can add comments to
+the question, which are displayed below the question. Users can edit their own
+comments.</p>
+
+<p><img src="assets/images/tukki-en/kommentti.png" alt="kommentti" /></p>
+
+<p>The name, role, avatar icon, and the date the comment was posted and edited are
+displayed with the question and comment.</p>
+
+<p>When editing a comment, you can delete it, change the status of the comment or text,
+and add or remove attachments. The attachment component is something I made myself.</p>
+
+<p><img src="src/assets/screenshots/progress-bar.png" alt="kommentti" /></p>
+
+<p>Files are sent simultaneously and the status of their transmission is updated
+with progress bars.</p>
+
+<p><img src="assets/images/tukki-en/oletko-varma.png" alt="oletko varma" /></p>
+
+<p>Teachers can ask Frequently Asked Questions. Here the user has selected “Beginning”
+in the middle of editing, in which case they will be asked for confirmation. Forms
+are validated using Angular Reactive Forms.</p>
+
+<p><img src="assets/images/tukki-en/asetukset.png" alt="asetukset" /></p>
+
+<p>Teachers on the course can change the course settings, download and add
+frequently asked questions and course settings, and invite people outside
+courses to join it. Clicking on the edit icon for additional fields will open
+an editing view for them.</p>
+
+<p><img src="assets/images/tukki-en/lisäkenttä.png" alt="asetukset" /></p>
+
+<p>Edit view for additional fields. The addition of multiple options is implemented
+using Angular Material chips.</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>John Doe</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tukki -tikettijärjestelmä (fi)">
+  <meta property="og:description" content="Digivertaisverkko -hanke, Oulun Yliopisto">
+  <meta property="og:image" content="assets/images/tukki/lista.png">
+
+  <title>Tukki -tikettijärjestelmä (fi)</title>
+  <meta name="description" content="Digivertaisverkko -hanke, Oulun Yliopisto">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Portfolio</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="tukki--tikettijärjestelmän-frontend">Tukki -tikettijärjestelmän frontend</h1>
+
+<p><a href="2-tukki-en.html">English version of this document</a></p>
+
+<p>Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
+frontendiä, jota olin toteuttamassa.</p>
+
+<p>Frontend on toteutettu <a href="https://angular.io/">Angularilla</a>. Ohjelmointikielenä
+oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni ylläpitäjälle suunnattu
+dokumentaatio on tiedostossa <a href="documentation/kuvaus/kuvaus.md">documentation/kuvaus/kuvaus.md</a>.
+Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.</p>
+
+<h2 id="sovelluksen-kuvaus">Sovelluksen kuvaus</h2>
+
+<p>Sovellus on suunnattu ohjelmointia korkeakouluissa opettaville opettajille ja opiskelijoille. Sen tarkoituksena on helpottaa heidän välistä kommunikaatiota. Sovelluksella oppilaat voivat esittää kurssin opettajille kysymyksiä, jotka ovat näkyvillä vain opettajille ja opettajat voivat vastata näihin lisäämällä kysymyksiin kommentteja.</p>
+
+<h2 id="mitä-tein-projektissa">Mitä tein projektissa</h2>
+
+<p>Tekniseen tiimiin kuului lisäksi kaksi tiimiläistä. Alla erittely, mitä osa-alueita tein ja mitkä olivat toisten tekemiä:</p>
+
+<h3 id="osa-alueet-jotka-olen-tehnyt-frontendin-osalta">Osa-alueet, jotka olen tehnyt frontendin osalta</h3>
+
+<ul>
+  <li>Frontend-arkkitehtuuri</li>
+  <li>Suuren osan toteutuksesta</li>
+  <li>Tekninen dokumentaatio</li>
+  <li>Lähes kaikki yksikkötestit</li>
+</ul>
+
+<h3 id="muiden-tiimiläisten-tekemää">Muiden tiimiläisten tekemää</h3>
+
+<ul>
+  <li>Sovelluksen toiminnallisuus- ja käyttöliittymäsuunnittelu</li>
+  <li>Osia frontendista: Rich text editori, UKK:n tekeminen kysymyksestä,
+profiilinäkymä, kysymys-näkymien lisäkentät, tietosuojaselosteen sisältö.</li>
+</ul>
+
+<h2 id="toteutuksen-esittely">Toteutuksen esittely</h2>
+
+<p>Tässä ei käydä läpi kaikkia järjestelmän toimintoja tai näkymiä, mutta esitellään joitain poimintoja. Sovellus on suunniteltu käytettäväksi ensisijaisesti tietokoneen näytöltä sekä myöskin tablettikoossa. Saavutettavuuteen on kiinnitetty huomiota.</p>
+
+<p><img src="assets/images/tukki/lista.png" alt="kysymyslista" /></p>
+
+<p>Kysymysten listaus on sovelluksen päänäkymä. Tässä näkymä käytettynä
+Moodle-upotuksen ulkopuolella. Opettajana kirjautuneena näkyvät kaikki
+kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät kaikki hänen lähettämät kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät <em>Usein kysytyt kysymykset</em>.</p>
+
+<p>Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset. “Kysy opettajilta” -napilla voi esittää opettajille uuden kysymyksen.</p>
+
+<p>Taulukko on tehty Angular Material -kirjastoa hyödyntäen ja on responsiivinen.
+Rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten
+sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai
+manuaalisesti ikonia-klikkaamalla.</p>
+
+<p><img src="assets/images/tukki/lista-en.png" alt="kysymyslista" /></p>
+
+<p><img src="assets/images/tukki/valikko.png" alt="kysymyslista" /></p>
+
+<p>Sovelluksessa käytetyn kielen voi vaihtaa englanniksi. Käyttäjät voivat tarkastella käyttäjäprofiiliaan ja opettajat voivat muokata kurssin asetuksia.</p>
+
+<p><img src="assets/images/tukki/login.png" alt="kysymyslista" /></p>
+
+<p>Järjestelmää voi käyttää Moodleen upotettuna tai sen ulkopuolella. Upotuksessa
+kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminne tehdään manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista Authorization Code Flow:a.</p>
+
+<p><img src="assets/images/tukki/tiketti.png" alt="uusi kysymys" /></p>
+
+<p>Yksittäisen kysymyksen näkymässä käyttäjä voi tarkastella kysymyksen tietoja.
+Opettaja voi kopioi kysymyksen UKK:ksi tai asettaa sen ratkaistuksi. kysymyksen lähettäjä voi poistaa tai muokata sitä. Opettajat ja opiskelija voivat lisätä
+kysymykseen kommentteja, jotka näkyvät kysymyksen alla. Käyttäjät voivat muokata
+omia kommenttejaan.</p>
+
+<p><img src="assets/images/tukki/kommentti.png" alt="kommentti" /></p>
+
+<p>Kysymyksen ja kommentin yhteydessä näkyy lähettäjän nimi, rooli, avatar-ikoni ja
+kommentin lähettämis- ja muokkaamispäivämäärä.</p>
+
+<p>Kommenttia muokatessa sen voi poistaa, muuttaa kommentin tai tekstin tilaa sekä
+lisätä tai poistaa liitteitä. Liite-komponentin olen tehnyt itse.</p>
+
+<p><img src="assets/images/tukki/progress-bar.png" alt="kommentti" /></p>
+
+<p>Tiedostoja lähetetään rinnakkain ja niiden lähetyksen lähetyksen tila
+päivitetään edistymispalkeilla. Tässä on käytetty RxJS -kirjastoa.</p>
+
+<p><img src="assets/images/tukki/oletko-varma.png" alt="oletko varma" /></p>
+
+<p>Uuden UKK:n lisäämisen näkymä. Tässä käyttäjä on painanut “Alkuun” -nappi kesken muokkauksen, jolloin kysytään varmistusta. Lomakkeiden validointiin on käytetty Angular Reactive Forms:a.</p>
+
+<p><img src="assets/images/tukki/asetukset.png" alt="asetukset" /></p>
+
+<p>Kurssilla olevata opettajat voivat muuttaa kurssin asetuksia, ladata ja lisätä
+usein kysyttyjä kysymyksiä sekä kurssin asetuksia ja kutstua ulkopuolisia
+osallistumaan kurssille. Lisäkenttien editointi-ikonia valitsemalla avautuu
+niiden muokkausnäkymä.</p>
+
+<p><img src="assets/images/tukki/lisäkenttä.png" alt="asetukset" /></p>
+
+<p>Lisäkenttien muokkausnäkymä. Monivalintojen lisääminen on toteutettu Angular
+Materialin chipseillä.</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>John Doe</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
