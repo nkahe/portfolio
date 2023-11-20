@@ -1,0 +1,13 @@
+original
+
+*.kate-swp
+
+# Ruby Gems
+*.gem
+
+# Design Files
+*.psd
+*.ai
+
+# IntelliJ
+.idea
