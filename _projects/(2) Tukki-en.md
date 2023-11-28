@@ -11,8 +11,9 @@ description: Diginet project, University of Oulu
 
 This is presentation of the frontend for the Tukki ticketing system I was
 implementing for the Diginet -project. It has been implemented with
-[Angular](https://angular.io/). Other technical documentation about interface
-I've made can be found in the file [documentation/kuvaus/description.md](documentation/kuvaus/description.md).
+[Angular](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
+Other technical documentation about interface I've made
+[can be read here](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/description.md).
 Techical documentation created with Compodoc is in file [documentation/index.html](documentation/index.html).
 
 First, is useful to define what was the scope I did and what was done by others:
@@ -90,3 +91,5 @@ an editing view for them.
 
 Edit view for additional fields. The addition of multiple options is implemented
 using Angular Material chips.
+
+ <a href="#">Back to beginning</a>

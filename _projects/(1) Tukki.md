@@ -13,9 +13,9 @@ description: Digivertaisverkko -hanke, Oulun Yliopisto
 Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
 frontendiä, jota olin toteuttamassa. 
 
-Frontend on toteutettu [Angularilla](https://angular.io/). Ohjelmointikielenä
-oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni ylläpitäjälle suunnattu
-dokumentaatio on tiedostossa [documentation/kuvaus/kuvaus.md](documentation/kuvaus/kuvaus.md).
+Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
+Ohjelmointikielenä oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni ylläpitäjälle suunnatun
+[voi lukea täältä.](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/kuvaus.md){:target="_blank" rel="noopener noreferrer"}
 Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.
 
 ## Sovelluksen kuvaus
@@ -103,3 +103,5 @@ niiden muokkausnäkymä.
 
 Lisäkenttien muokkausnäkymä. Monivalintojen lisääminen on toteutettu Angular
 Materialin chipseillä.
+
+ <a href="#">Takaisin alkuun</a>
