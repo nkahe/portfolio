@@ -1,5 +1,6 @@
 ---
-name: Tukki ticketing system
+name: Tukki ticketing system (en)
+layout: default
 tools: [Angular, TypeScript, HTML, Sass]
 image: assets/images/tukki-en//lista.png
 description: Diginet project, University of Oulu
