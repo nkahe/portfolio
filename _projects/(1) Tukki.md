@@ -1,5 +1,6 @@
 ---
 name: Tukki -tikettijärjestelmä (fi)
+layout: default
 tools: [Angular, TypeScript, HTML, Sass]
 image: assets/images/tukki/lista.png
 description: Digivertaisverkko -hanke, Oulun Yliopisto
