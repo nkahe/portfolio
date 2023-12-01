@@ -4,12 +4,14 @@ layout: default
 tools: [Angular, TypeScript, HTML, Sass]
 image: assets/images/tukki/lista.png
 description: Digivertaisverkko -hanke, Oulun Yliopisto
-# external_url: https://www.google.com
+# external_url: github.com/nkahe/Tukki-frontend
 ---
 
 # Tukki -tikettijärjestelmän frontend
 
 [English version of this document](2-tukki-en.html)
+
+[Koodirepon fork Githubissa](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
 
 Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
 frontendiä, jota olin toteuttamassa. 
