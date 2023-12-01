@@ -10,6 +10,8 @@ description: Diginet project, University of Oulu
 
 [This documentation in finnish](1-tukki.html)
 
+[Fork of the repo in Github](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
+
 This is presentation of the frontend for the Tukki ticketing system I was
 implementing for the Diginet -project. It has been implemented with
 [Angular](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
