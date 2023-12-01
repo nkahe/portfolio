@@ -28,6 +28,10 @@
 
 .cls-14 { fill: #7d6aa5; }
 
+p, li {
+  max-width: 50em;
+}
+
 /* animations */
 .wheel { animation: wheel-rotate 6s ease infinite; transform-origin: center; transform-box: fill-box; }
 
