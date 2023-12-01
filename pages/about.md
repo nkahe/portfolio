@@ -7,8 +7,16 @@ weight: 3
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Hi I am **{{ site.author.name }}** <br>
+
+I'm Business Information Systems tradenom and looking for a job in software
+development. I have most experience in making user interfaces in context of web
+front-end development. I've background in technology oriented primary teacher
+education. I'm long time Linux fan but experience on working in different
+environments.
+
+Skills percentages mainly reflect how much time I've spent learning and using
+different skills.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
