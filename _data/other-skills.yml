@@ -1,7 +1,55 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: Desktop Linux
+  percentage: 80
+  color: success
+
+- name: Angular Material
+  percentage: 75
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
-  color: success
+- name: English language
+  percentage: 75
+  color: info
+
+- name: Agile, Scrum
+  percentage: 70
+  color: info
+
+- name: Business skills
+  percentage: 70
+  color: info
+
+- name: Writing
+  percentage: 70
+  color: info
+
+- name: Word processing
+  percentage: 70
+  color: info
+
+- name: Information security
+  percentage: 60
+  color: 
+
+- name: Wordpress
+  percentage: 60
+  color: 
+
+- name: Service Design
+  percentage: 60
+  color: 
+
+- name: Spreadsheets
+  percentage: 50
+  color: 
+
+- name: Image editing
+  percentage: 30
+  color: 
+
+- name: Video editing
+  percentage: 30
+  color: 
+
+- name: Mobile gaming development
+  percentage: 15
+  color: danger

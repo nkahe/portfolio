@@ -1,11 +1,56 @@
-- name: HTML5/CSS3
-  percentage: 90
-  color: danger
+- name: HTML5, CSS3, Sass
+  percentage: 75
+  color: success
 
-- name: Go
-  percentage: 80
+- name: Typescript
+  percentage: 65
+  color: info
+
+- name: Angular
+  percentage: 65
+  color: info
+
+- name: Javascript
+  percentage: 60
   color:
 
+- name: Ionic Framework
+  percentage: 50
+  color: 
+
+- name: Jasmine
+  percentage: 50
+  color: 
+
+- name: SQL
+  percentage: 45
+  color:
+
+- name: Bootstrap & jQuery
+  percentage: 45
+  color: 
+
+- name: Bash
+  percentage: 40
+  color:
+
+  
+- name: PHP
+  percentage: 35
+  color:
+
+- name: C++
+  percentage: 15
+  color:
+
+- name: Node.js
+  percentage: 10
+  color: danger
+
 - name: Python
-  percentage: 70
-  color: secondary
+  percentage: 10
+  color: danger
+
+- name: React
+  percentage: 10
+  color: danger
