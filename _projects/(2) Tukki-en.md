@@ -27,7 +27,7 @@ First, is useful to define what was the scope I did and what was done by others:
 - Technical documentation.
 - Almost all unit tests.
 
-## Things done my team mates
+## Things done by my team mates
 
 - Application functionality- and interface design.
 - Some parts of the frontend: rich text editor, make a FAQ from question,
@@ -43,8 +43,6 @@ questions asked to teachers in the course. The table is made using the Angular
 Material library. The rows can be sorted by different columns and filtered by
 the information contained in the different questions. The content of the table
 is updated periodically or manually.
-
-![kysymyslista](src/assets/screenshots/lista.png)
 
 ![kysymyslista](assets/images/tukki-en/valikko.png)
 
@@ -71,7 +69,7 @@ displayed with the question and comment.
 When editing a comment, you can delete it, change the status of the comment or text,
 and add or remove attachments. The attachment component is something I made myself.
 
-![kommentti](src/assets/screenshots/progress-bar.png)
+![progress bar](assets/images/tukki/progress-bar.png)
 
 Files are sent simultaneously and the status of their transmission is updated
 with progress bars.
