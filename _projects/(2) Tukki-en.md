@@ -17,7 +17,6 @@ implementing for the Diginet -project. It has been implemented with
 [Angular](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
 Other technical documentation about interface I've made
 [can be read here](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/description.md).
-Techical documentation created with Compodoc is in file [documentation/index.html](documentation/index.html).
 
 First, is useful to define what was the scope I did and what was done by others:
 
