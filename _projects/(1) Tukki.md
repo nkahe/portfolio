@@ -11,13 +11,13 @@ description: Digivertaisverkko -hanke, Oulun Yliopisto
 
 [English version of this document](2-tukki-en.html)
 
-[Koodirepon fork Githubissa](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
+[Lähdekoodi Githubissa](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
 
 Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
 frontendiä, jota olin toteuttamassa. 
 
 Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
-Ohjelmointikielenä oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni ylläpitäjälle suunnatun
+Ohjelmointikielenä oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni teknisen kuvauksen
 [voi lukea täältä.](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/kuvaus.md){:target="_blank" rel="noopener noreferrer"}
 Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.
 
