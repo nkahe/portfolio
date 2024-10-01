@@ -16,11 +16,11 @@
 
 - name: Ionic Framework
   percentage: 50
-  color: 
+  color:
 
 - name: Jasmine
   percentage: 50
-  color: 
+  color:
 
 - name: SQL
   percentage: 45
@@ -28,15 +28,18 @@
 
 - name: Bootstrap & jQuery
   percentage: 45
-  color: 
+  color:
 
 - name: Bash
   percentage: 40
   color:
 
-  
 - name: PHP
   percentage: 35
+  color:
+
+  - name: React
+  percentage: 25
   color:
 
 - name: C++
@@ -48,9 +51,5 @@
   color: danger
 
 - name: Python
-  percentage: 10
-  color: danger
-
-- name: React
   percentage: 10
   color: danger
