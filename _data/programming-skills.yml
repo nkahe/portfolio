@@ -46,10 +46,10 @@
   percentage: 15
   color:
 
-- name: Node.js
-  percentage: 10
-  color: danger
-
 - name: Python
+  percentage: 15
+  color: 
+
+- name: Node.js
   percentage: 10
   color: danger

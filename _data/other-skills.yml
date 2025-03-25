@@ -1,4 +1,4 @@
-- name: Desktop Linux
+- name: Linux
   percentage: 80
   color: success
 
@@ -50,6 +50,6 @@
   percentage: 30
   color: 
 
-- name: Mobile gaming development
-  percentage: 15
+- name: AWS
+  percentage: 10
   color: danger
