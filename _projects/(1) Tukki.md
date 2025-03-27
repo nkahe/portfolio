@@ -1,9 +1,9 @@
 ---
 name: Tukki -tikettijärjestelmä (fi)
 layout: default
-tools: [Angular, TypeScript, HTML, Sass]
+tools: [Angular, TypeScript, HTML, Sass, Jasmine, REST]
 image: assets/images/tukki/lista.png
-description: Digivertaisverkko -hanke, Oulun Yliopisto
+description: Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.
 # external_url: github.com/nkahe/Tukki-frontend
 ---
 
@@ -11,53 +11,55 @@ description: Digivertaisverkko -hanke, Oulun Yliopisto
 
 [English version of this document](2-tukki-en.html)
 
-[Lähdekoodi Githubissa](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
-
 Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
-frontendiä, jota olin toteuttamassa. 
-
-Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
-Ohjelmointikielenä oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni teknisen kuvauksen
+frontendiä, jota olin toteuttamassa. Tein sitä 14 kk aikana. Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"},
+ohjelmointikielenä oli Typescript ja tyylimäärittelyissä Sass/SCSS. Tarkemman tekemäni teknisen kuvauksen
 [voi lukea täältä.](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/kuvaus.md){:target="_blank" rel="noopener noreferrer"}
 Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.
 
+Sovelluksen lähdekoodi on avointa ja [nähtävillä Githubissa -repossani](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}.
+
 ## Sovelluksen kuvaus
 
-Sovellus on suunnattu ohjelmointia korkeakouluissa opettaville opettajille ja opiskelijoille. Sen tarkoituksena on helpottaa heidän välistä kommunikaatiota. Sovelluksella oppilaat voivat esittää kurssin opettajille kysymyksiä, jotka ovat näkyvillä vain opettajille ja opettajat voivat vastata näihin lisäämällä kysymyksiin kommentteja. 
+Sovellus on tarkoitettu helpottamaan korkeakouluissa ohjelmointia opettavien opettajien ja opiskelijoille välistä kommunikaatiota. Sovelluksella opiskelijat voivat esittää kurssin opettajille kysymyksiä, ja opettajat voivat vastata näihin lisäämällä kysymyksiin kommentteja.
 
-## Mitä tein projektissa
-
-Tekniseen tiimiin kuului lisäksi kaksi tiimiläistä. Alla erittely, mitä osa-alueita tein ja mitkä olivat toisten tekemiä:
-
-### Osa-alueet, jotka olen tehnyt frontendin osalta
+Tekniseen tiimiin kuului minun lisäksi kaksi tiimiläistä. Keskityin seuraaviin osa-alueisiin front-endissä:
 
 - Frontend-arkkitehtuuri
 - Suuren osan toteutuksesta
 - Tekninen dokumentaatio
 - Lähes kaikki yksikkötestit
 
-### Muiden tiimiläisten tekemää
+Muiden tiimiläisteni tekemää:
 
 - Sovelluksen toiminnallisuus- ja käyttöliittymäsuunnittelu
 - Osia frontendista: Rich text editori, UKK:n tekeminen kysymyksestä,
-profiilinäkymä, kysymys-näkymien lisäkentät, tietosuojaselosteen sisältö.
+profiilinäkymä, kysymysnäkymien lisäkentät, tietosuojaselosteen sisältö.
+
+Projektin (front-endin) lähdekoodin koko numeroina:
+
+| Kieli      | Tiedostot | Tyhjiä | Kommentteja | Koodia  |
+|------------|-------|-------|---------|-------|
+| TypeScript | 123   | 1508  | 1854    | 10660 |
+| HTML       | 27    | 510   | 74      | 3179  |
+| SCSS       | 38    | 376   | 136     | 1766  |
+| JSON       | 2     | 0     | 0       | 319   |
+| **Yhteensä**   | 190   | 2394  | 2064    | 15924 |
+
 
 ## Toteutuksen esittely
 
-Tässä ei käydä läpi kaikkia järjestelmän toimintoja tai näkymiä, mutta esitellään joitain poimintoja. Sovellus on suunniteltu käytettäväksi ensisijaisesti tietokoneen näytöltä sekä myöskin tablettikoossa. Saavutettavuuteen on kiinnitetty huomiota.
+En käy läpi kaikkia järjestelmän toimintoja tai näkymiä, mutta esittelen joitain poimintoja. Sovellus on suunniteltu käytettäväksi ensisijaisesti tietokoneen näytöltä tai tablettikoosta, mutta on käytettävissä myös puhelinkoossa. Saavutettavuuteen on kiinnitetty huomiota.
+
+Kysymysten listaus on sovelluksen päänäkymä:
 
 ![kysymyslista](assets/images/tukki/lista.png)
 
-Kysymysten listaus on sovelluksen päänäkymä. Tässä näkymä käytettynä
-Moodle-upotuksen ulkopuolella. Opettajana kirjautuneena näkyvät kaikki
-kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät kaikki hänen lähettämät kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät *Usein kysytyt kysymykset*.
+Sovellus on upotettavissa Moodle -oppimisjärjestelmään, tai sitä voidaan käyttää itsenäisenä verkkosovelluksena. Yllä on jälkimmäinen näkymä. Opettajana kirjautuneena näkyvät kaikki kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät vain kaikki hänen lähettämänsä kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät *Usein kysytyt kysymykset*.
 
-Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset. "Kysy opettajilta" -napilla voi esittää opettajille uuden kysymyksen.
+Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset.
 
-Taulukko on tehty Angular Material -kirjastoa hyödyntäen ja on responsiivinen.
-Rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten
-sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai
-manuaalisesti ikonia-klikkaamalla.
+Sovellulksen komponenteissa on käytetty Angular Material -kirjastoa, jonka ulkonäköä on tarvittaessa muokattu. Osan komponenteissa olen tehnyt itse. Taulukon rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai manuaalisesti.
 
 
 ![kysymyslista](assets/images/tukki/lista-en.png)
@@ -68,8 +70,7 @@ Sovelluksessa käytetyn kielen voi vaihtaa englanniksi. Käyttäjät voivat tark
 
 ![kysymyslista](assets/images/tukki/login.png)
 
-Järjestelmää voi käyttää Moodleen upotettuna tai sen ulkopuolella. Upotuksessa
-kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminne tehdään manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista Authorization Code Flow:a.
+Moodleen upotettuna kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminen tehdään ensin manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista <i>authorization code flow</i>:a. Sen jälkeen tunnistautuminen tapahtuu keksillä.
 
 ![uusi kysymys](assets/images/tukki/tiketti.png)
 
@@ -84,12 +85,12 @@ Kysymyksen ja kommentin yhteydessä näkyy lähettäjän nimi, rooli, avatar-iko
 kommentin lähettämis- ja muokkaamispäivämäärä.
 
 Kommenttia muokatessa sen voi poistaa, muuttaa kommentin tai tekstin tilaa sekä
-lisätä tai poistaa liitteitä. Liite-komponentin olen tehnyt itse.
+lisätä tai poistaa liitteitä. Liite -komponentin tein itse. Liitteitä voi lisätä useita, ja niiden lähettäminen tapahtuu rinnakkaisesti näyttäen tiedostoille edistymispalkit. Siinä hyödynnetään observablien käytössä RxJS -kirjastoa.
 
 ![kommentti](assets/images/tukki/progress-bar.png)
 
-Tiedostoja lähetetään rinnakkain ja niiden lähetyksen lähetyksen tila
-päivitetään edistymispalkeilla. Tässä on käytetty RxJS -kirjastoa.
+Tiedostoja voi lisätä useita, ne lähetetään rinnakkain ja niiden lähetyksen tila
+päivitetään edistymispalkeilla. Tässä on hyödynnetty RxJS -kirjastoa.
 
 ![oletko varma](assets/images/tukki/oletko-varma.png)
 
@@ -107,4 +108,4 @@ niiden muokkausnäkymä.
 Lisäkenttien muokkausnäkymä. Monivalintojen lisääminen on toteutettu Angular
 Materialin chipseillä.
 
- <a href="#">Takaisin alkuun</a>
+<a href="#">Takaisin alkuun</a>

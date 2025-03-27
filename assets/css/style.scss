@@ -1,11 +1,50 @@
 ---
 ---
-
-// Omat tyylimäärittelyt tähän.
-
 p, li {
    max-width: 45em;
 }
 
-// Oletustyylit
+.nav-item {
+  font-size: 1.1rem;
+}
+
+// This is last.
 @import "portfolYOU";
+
+h5 {
+  font-size: 1.4rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px; /* Increase padding */
+  // border: 1px solid #ddd;
+}
+
+th {
+  border-bottom: 1px solid white;
+}
+
+// @media (min-width: 768px) {
+//   table {
+//     width: 70%;
+//   }
+// }
+
+@media (min-width: 992px) {
+  table {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  table {
+    width: 60%;
+  }
+}

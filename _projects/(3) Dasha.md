@@ -3,7 +3,7 @@ name: Nuohtti
 layout: default
 tools: [HTML, CSS/LESS, Bootstrap, Javascript, jQuery, PHP]
 image: assets/images/dasha/dasha-thumbnail.jpg
-description: Web page to view digitized archival material related to Sámi culture. Oulun Yliopisto.
+description: Web application to view digitized archival material related to Sámi culture. 
 # external_url: https://www.google.com
 ---
 

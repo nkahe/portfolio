@@ -22,11 +22,11 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tukki -tikettijärjestelmä (fi)">
-  <meta property="og:description" content="Digivertaisverkko -hanke, Oulun Yliopisto">
+  <meta property="og:description" content="Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.">
   <meta property="og:image" content="assets/images/tukki/lista.png">
 
   <title>Tukki -tikettijärjestelmä (fi)</title>
-  <meta name="description" content="Digivertaisverkko -hanke, Oulun Yliopisto">
+  <meta name="description" content="Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/portfolio/assets/favicon.ico">
 
@@ -75,25 +75,19 @@
 
 <p><a href="2-tukki-en.html">English version of this document</a></p>
 
-<p><a href="http://github.com/nkahe/Tukki-frontend" target="_blank" rel="noopener noreferrer">Lähdekoodi Githubissa</a></p>
-
 <p>Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
-frontendiä, jota olin toteuttamassa.</p>
-
-<p>Frontend on toteutettu <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">Angularilla</a>.
-Ohjelmointikielenä oli Typescript ja tyylimäärittelyissä SASS/SCSS. Tekemäni teknisen kuvauksen
+frontendiä, jota olin toteuttamassa. Tein sitä 14 kk aikana. Frontend on toteutettu <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">Angularilla</a>,
+ohjelmointikielenä oli Typescript ja tyylimäärittelyissä Sass/SCSS. Tarkemman tekemäni teknisen kuvauksen
 <a href="https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/kuvaus.md" target="_blank" rel="noopener noreferrer">voi lukea täältä.</a>
 Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.</p>
 
+<p>Sovelluksen lähdekoodi on avointa ja <a href="http://github.com/nkahe/Tukki-frontend" target="_blank" rel="noopener noreferrer">nähtävillä Githubissa -repossani</a>.</p>
+
 <h2 id="sovelluksen-kuvaus">Sovelluksen kuvaus</h2>
 
-<p>Sovellus on suunnattu ohjelmointia korkeakouluissa opettaville opettajille ja opiskelijoille. Sen tarkoituksena on helpottaa heidän välistä kommunikaatiota. Sovelluksella oppilaat voivat esittää kurssin opettajille kysymyksiä, jotka ovat näkyvillä vain opettajille ja opettajat voivat vastata näihin lisäämällä kysymyksiin kommentteja.</p>
+<p>Sovellus on tarkoitettu helpottamaan korkeakouluissa ohjelmointia opettavien opettajien ja opiskelijoille välistä kommunikaatiota. Sovelluksella opiskelijat voivat esittää kurssin opettajille kysymyksiä, ja opettajat voivat vastata näihin lisäämällä kysymyksiin kommentteja.</p>
 
-<h2 id="mitä-tein-projektissa">Mitä tein projektissa</h2>
-
-<p>Tekniseen tiimiin kuului lisäksi kaksi tiimiläistä. Alla erittely, mitä osa-alueita tein ja mitkä olivat toisten tekemiä:</p>
-
-<h3 id="osa-alueet-jotka-olen-tehnyt-frontendin-osalta">Osa-alueet, jotka olen tehnyt frontendin osalta</h3>
+<p>Tekniseen tiimiin kuului minun lisäksi kaksi tiimiläistä. Keskityin seuraaviin osa-alueisiin front-endissä:</p>
 
 <ul>
   <li>Frontend-arkkitehtuuri</li>
@@ -102,30 +96,78 @@ Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuu
   <li>Lähes kaikki yksikkötestit</li>
 </ul>
 
-<h3 id="muiden-tiimiläisten-tekemää">Muiden tiimiläisten tekemää</h3>
+<p>Muiden tiimiläisteni tekemää:</p>
 
 <ul>
   <li>Sovelluksen toiminnallisuus- ja käyttöliittymäsuunnittelu</li>
   <li>Osia frontendista: Rich text editori, UKK:n tekeminen kysymyksestä,
-profiilinäkymä, kysymys-näkymien lisäkentät, tietosuojaselosteen sisältö.</li>
+profiilinäkymä, kysymysnäkymien lisäkentät, tietosuojaselosteen sisältö.</li>
 </ul>
+
+<p>Projektin (front-endin) lähdekoodin koko numeroina:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kieli</th>
+      <th>Tiedostot</th>
+      <th>Tyhjiä</th>
+      <th>Kommentteja</th>
+      <th>Koodia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TypeScript</td>
+      <td>123</td>
+      <td>1508</td>
+      <td>1854</td>
+      <td>10660</td>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>27</td>
+      <td>510</td>
+      <td>74</td>
+      <td>3179</td>
+    </tr>
+    <tr>
+      <td>SCSS</td>
+      <td>38</td>
+      <td>376</td>
+      <td>136</td>
+      <td>1766</td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>319</td>
+    </tr>
+    <tr>
+      <td><strong>Yhteensä</strong></td>
+      <td>190</td>
+      <td>2394</td>
+      <td>2064</td>
+      <td>15924</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="toteutuksen-esittely">Toteutuksen esittely</h2>
 
-<p>Tässä ei käydä läpi kaikkia järjestelmän toimintoja tai näkymiä, mutta esitellään joitain poimintoja. Sovellus on suunniteltu käytettäväksi ensisijaisesti tietokoneen näytöltä sekä myöskin tablettikoossa. Saavutettavuuteen on kiinnitetty huomiota.</p>
+<p>En käy läpi kaikkia järjestelmän toimintoja tai näkymiä, mutta esittelen joitain poimintoja. Sovellus on suunniteltu käytettäväksi ensisijaisesti tietokoneen näytöltä tai tablettikoosta, mutta on käytettävissä myös puhelinkoossa. Saavutettavuuteen on kiinnitetty huomiota.</p>
+
+<p>Kysymysten listaus on sovelluksen päänäkymä:</p>
 
 <p><img src="assets/images/tukki/lista.png" alt="kysymyslista" /></p>
 
-<p>Kysymysten listaus on sovelluksen päänäkymä. Tässä näkymä käytettynä
-Moodle-upotuksen ulkopuolella. Opettajana kirjautuneena näkyvät kaikki
-kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät kaikki hänen lähettämät kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät <em>Usein kysytyt kysymykset</em>.</p>
+<p>Sovellus on upotettavissa Moodle -oppimisjärjestelmään, tai sitä voidaan käyttää itsenäisenä verkkosovelluksena. Yllä on jälkimmäinen näkymä. Opettajana kirjautuneena näkyvät kaikki kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät vain kaikki hänen lähettämänsä kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät <em>Usein kysytyt kysymykset</em>.</p>
 
-<p>Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset. “Kysy opettajilta” -napilla voi esittää opettajille uuden kysymyksen.</p>
+<p>Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset.</p>
 
-<p>Taulukko on tehty Angular Material -kirjastoa hyödyntäen ja on responsiivinen.
-Rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten
-sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai
-manuaalisesti ikonia-klikkaamalla.</p>
+<p>Sovellulksen komponenteissa on käytetty Angular Material -kirjastoa, jonka ulkonäköä on tarvittaessa muokattu. Osan komponenteissa olen tehnyt itse. Taulukon rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai manuaalisesti.</p>
 
 <p><img src="assets/images/tukki/lista-en.png" alt="kysymyslista" /></p>
 
@@ -135,8 +177,7 @@ manuaalisesti ikonia-klikkaamalla.</p>
 
 <p><img src="assets/images/tukki/login.png" alt="kysymyslista" /></p>
 
-<p>Järjestelmää voi käyttää Moodleen upotettuna tai sen ulkopuolella. Upotuksessa
-kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminne tehdään manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista Authorization Code Flow:a.</p>
+<p>Moodleen upotettuna kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminen tehdään ensin manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista <i>authorization code flow</i>:a. Sen jälkeen tunnistautuminen tapahtuu keksillä.</p>
 
 <p><img src="assets/images/tukki/tiketti.png" alt="uusi kysymys" /></p>
 
@@ -151,12 +192,12 @@ omia kommenttejaan.</p>
 kommentin lähettämis- ja muokkaamispäivämäärä.</p>
 
 <p>Kommenttia muokatessa sen voi poistaa, muuttaa kommentin tai tekstin tilaa sekä
-lisätä tai poistaa liitteitä. Liite-komponentin olen tehnyt itse.</p>
+lisätä tai poistaa liitteitä. Liite -komponentin tein itse. Liitteitä voi lisätä useita, ja niiden lähettäminen tapahtuu rinnakkaisesti näyttäen tiedostoille edistymispalkit. Siinä hyödynnetään observablien käytössä RxJS -kirjastoa.</p>
 
 <p><img src="assets/images/tukki/progress-bar.png" alt="kommentti" /></p>
 
-<p>Tiedostoja lähetetään rinnakkain ja niiden lähetyksen lähetyksen tila
-päivitetään edistymispalkeilla. Tässä on käytetty RxJS -kirjastoa.</p>
+<p>Tiedostoja voi lisätä useita, ne lähetetään rinnakkain ja niiden lähetyksen tila
+päivitetään edistymispalkeilla. Tässä on hyödynnetty RxJS -kirjastoa.</p>
 
 <p><img src="assets/images/tukki/oletko-varma.png" alt="oletko varma" /></p>
 
@@ -185,23 +226,24 @@ Materialin chipseillä.</p>
   </div>
 
   <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:hkaustin@posteo.fi"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#db4437'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fas fa-envelope fa-1x"></i>
     </a><a class="social mx-1"  href="https://www.github.com/nkahe"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#333333'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-github fa-1x"></i>
     </a><a class="social mx-1"  href="https://www.linkedin.com/in/hkaustin"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#007bb5'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-linkedin-in fa-1x"></i>
     </a>
 
-</div><small id="attribution">
+</div>
+<small id="attribution">
     theme <a href="https://github.com/yousinix/portfolYOU">portfolYOU</a>
   </small>
 

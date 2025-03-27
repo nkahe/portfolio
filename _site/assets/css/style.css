@@ -468,3 +468,12 @@ body { font-family: "Poppins", sans-serif; }
 [data-theme="dark"] .timeline-body .timeline-item:after { background-color: #17191a; }
 
 h5 { font-size: 1.4rem; }
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; text-align: left; }
+
+th, td, .markdown-body table:not(.highlight) th { padding: 12px; /* Increase padding */ }
+
+th { border-bottom: 1px solid white; }
+
+@media (min-width: 992px) { table { width: 80%; } }
+@media (min-width: 1200px) { table { width: 60%; } }

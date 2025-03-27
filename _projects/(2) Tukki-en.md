@@ -1,44 +1,56 @@
 ---
 name: Tukki ticketing system (en)
 layout: default
-tools: [Angular, TypeScript, HTML, Sass]
+tools: [Angular, TypeScript, HTML, Sass, Jasmine, REST]
 image: assets/images/tukki-en//lista.png
-description: Diginet project, University of Oulu
+description: Web application for communication between teachers and students. 
 # external_url: https://www.google.com
 ---
-# Front-end for Tukki ticketing system
+# Front-end of Tukki -ticketing system
 
-[This documentation in finnish](1-tukki.html)
-
-[Fork of the repo in Github](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
+[Read this documentation in finnish](1-tukki.html)
 
 This is presentation of the frontend for the Tukki ticketing system I was
-implementing for the Diginet -project. It has been implemented with
+implementing for the Diginet -project. I did it during 14 month period. It has been implemented with
 [Angular](https://angular.io/){:target="_blank" rel="noopener noreferrer"}.
 Other technical documentation about interface I've made
 [can be read here](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/description.md).
 
-First, is useful to define what was the scope I did and what was done by others:
+Application is open source and the code [can be viewed at my Github -repo](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}
 
-## Things I've done for the frontend
+
+First, is useful to define what was the scope I did and what was done by others. Things I've done:
 
 - Frontend architechture.
 - Most of the implementation.
 - Technical documentation.
 - Almost all unit tests.
 
-## Things done by my team mates
+Things done by my team mates:
 
 - Application functionality- and interface design.
 - Some parts of the frontend: rich text editor, make a FAQ from question,
 profile view, additional fields in question views, privacy statement content.
 
+Size of project's (front-end) source code by numbers:
+
+| Language    | Files | Blank | Comment | Code  |
+|------------|-------|-------|---------|-------|
+| TypeScript | 123   | 1508  | 1854    | 10660 |
+| HTML       | 27    | 510   | 74      | 3179  |
+| SCSS       | 38    | 376   | 136     | 1766  |
+| JSON       | 2     | 0     | 0       | 319   |
+| **TOTAL**  | 190   | 2394  | 2064    | 15924 |
+
 ## Demonstration of implementation
+
+I won't go through all the functions or views of the system, but I'll show you some of the highlights. The application is designed to be used primarily on a computer screen or tablet, but is also usable on a phone screen. Attention has been paid to accessibility.
+
+The list of questions is the main view of the application:
 
 ![kysymyslista](assets/images/tukki-en/lista.png)
 
-The list of questions is the main view of the application. Here is the view used
-outside the Moodle upload. When logged in as a teacher, you can see all the
+The app can be embedded in the Moodle learning system, or used as a standalone web application. Above is the latter view. When logged in as a teacher, you can see all the
 questions asked to teachers in the course. The table is made using the Angular
 Material library. The rows can be sorted by different columns and filtered by
 the information contained in the different questions. The content of the table
@@ -46,12 +58,11 @@ is updated periodically or manually.
 
 ![kysymyslista](assets/images/tukki-en/valikko.png)
 
-You can change the language used in the app to Finnish
+You can change the language used in the app to Finnish.
 
 ![kysymyslista](assets/images/tukki-en/login.png)
 
-The system can be logged in manually with a login and password when used outside
-the Moodle upload.
+When embedded, the app gets login information from Moodle. Outside Moodle the login is done first manually with a login and password. It uses authorization code flow. After that authorization is done with a cookie.
 
 ![kysymys](assets/images/tukki-en/tiketti.png)
 
@@ -67,12 +78,12 @@ The name, role, avatar icon, and the date the comment was posted and edited are
 displayed with the question and comment.
 
 When editing a comment, you can delete it, change the status of the comment or text,
-and add or remove attachments. The attachment component is something I made myself.
+and add or remove attachments. I made attachment component by myself.
 
 ![progress bar](assets/images/tukki/progress-bar.png)
 
-Files are sent simultaneously and the status of their transmission is updated
-with progress bars.
+Files are sent in parallel and the status of their transmission is updated
+with progress bars. I made use for RxJS library with this.
 
 ![oletko varma](assets/images/tukki-en/oletko-varma.png)
 
@@ -92,4 +103,4 @@ an editing view for them.
 Edit view for additional fields. The addition of multiple options is implemented
 using Angular Material chips.
 
- <a href="#">Back to beginning</a>
+<a href="#">Back to beginning</a>

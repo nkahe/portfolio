@@ -22,11 +22,11 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tukki ticketing system (en)">
-  <meta property="og:description" content="Diginet project, University of Oulu">
+  <meta property="og:description" content="Web application for communication between teachers and students.">
   <meta property="og:image" content="assets/images/tukki-en//lista.png">
 
   <title>Tukki ticketing system (en)</title>
-  <meta name="description" content="Diginet project, University of Oulu">
+  <meta name="description" content="Web application for communication between teachers and students.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/portfolio/assets/favicon.ico">
 
@@ -71,21 +71,19 @@
   </div>
 
 </nav>
-    <h1 id="front-end-for-tukki-ticketing-system">Front-end for Tukki ticketing system</h1>
+    <h1 id="front-end-of-tukki--ticketing-system">Front-end of Tukki -ticketing system</h1>
 
-<p><a href="1-tukki.html">This documentation in finnish</a></p>
-
-<p><a href="http://github.com/nkahe/Tukki-frontend" target="_blank" rel="noopener noreferrer">Fork of the repo in Github</a></p>
+<p><a href="1-tukki.html">Read this documentation in finnish</a></p>
 
 <p>This is presentation of the frontend for the Tukki ticketing system I was
-implementing for the Diginet -project. It has been implemented with
+implementing for the Diginet -project. I did it during 14 month period. It has been implemented with
 <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">Angular</a>.
 Other technical documentation about interface I’ve made
 <a href="https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/description.md">can be read here</a>.</p>
 
-<p>First, is useful to define what was the scope I did and what was done by others:</p>
+<p>Application is open source and the code <a href="http://github.com/nkahe/Tukki-frontend" target="_blank" rel="noopener noreferrer">can be viewed at my Github -repo</a></p>
 
-<h2 id="things-ive-done-for-the-frontend">Things I’ve done for the frontend</h2>
+<p>First, is useful to define what was the scope I did and what was done by others. Things I’ve done:</p>
 
 <ul>
   <li>Frontend architechture.</li>
@@ -94,7 +92,7 @@ Other technical documentation about interface I’ve made
   <li>Almost all unit tests.</li>
 </ul>
 
-<h2 id="things-done-by-my-team-mates">Things done by my team mates</h2>
+<p>Things done by my team mates:</p>
 
 <ul>
   <li>Application functionality- and interface design.</li>
@@ -102,12 +100,66 @@ Other technical documentation about interface I’ve made
 profile view, additional fields in question views, privacy statement content.</li>
 </ul>
 
+<p>Size of project’s (front-end) source code by numbers:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Files</th>
+      <th>Blank</th>
+      <th>Comment</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TypeScript</td>
+      <td>123</td>
+      <td>1508</td>
+      <td>1854</td>
+      <td>10660</td>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>27</td>
+      <td>510</td>
+      <td>74</td>
+      <td>3179</td>
+    </tr>
+    <tr>
+      <td>SCSS</td>
+      <td>38</td>
+      <td>376</td>
+      <td>136</td>
+      <td>1766</td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>319</td>
+    </tr>
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td>190</td>
+      <td>2394</td>
+      <td>2064</td>
+      <td>15924</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="demonstration-of-implementation">Demonstration of implementation</h2>
+
+<p>I won’t go through all the functions or views of the system, but I’ll show you some of the highlights. The application is designed to be used primarily on a computer screen or tablet, but is also usable on a phone screen. Attention has been paid to accessibility.</p>
+
+<p>The list of questions is the main view of the application:</p>
 
 <p><img src="assets/images/tukki-en/lista.png" alt="kysymyslista" /></p>
 
-<p>The list of questions is the main view of the application. Here is the view used
-outside the Moodle upload. When logged in as a teacher, you can see all the
+<p>The app can be embedded in the Moodle learning system, or used as a standalone web application. Above is the latter view. When logged in as a teacher, you can see all the
 questions asked to teachers in the course. The table is made using the Angular
 Material library. The rows can be sorted by different columns and filtered by
 the information contained in the different questions. The content of the table
@@ -115,12 +167,11 @@ is updated periodically or manually.</p>
 
 <p><img src="assets/images/tukki-en/valikko.png" alt="kysymyslista" /></p>
 
-<p>You can change the language used in the app to Finnish</p>
+<p>You can change the language used in the app to Finnish.</p>
 
 <p><img src="assets/images/tukki-en/login.png" alt="kysymyslista" /></p>
 
-<p>The system can be logged in manually with a login and password when used outside
-the Moodle upload.</p>
+<p>When embedded, the app gets login information from Moodle. Outside Moodle the login is done first manually with a login and password. It uses authorization code flow. After that authorization is done with a cookie.</p>
 
 <p><img src="assets/images/tukki-en/tiketti.png" alt="kysymys" /></p>
 
@@ -136,12 +187,12 @@ comments.</p>
 displayed with the question and comment.</p>
 
 <p>When editing a comment, you can delete it, change the status of the comment or text,
-and add or remove attachments. The attachment component is something I made myself.</p>
+and add or remove attachments. I made attachment component by myself.</p>
 
 <p><img src="assets/images/tukki/progress-bar.png" alt="progress bar" /></p>
 
-<p>Files are sent simultaneously and the status of their transmission is updated
-with progress bars.</p>
+<p>Files are sent in parallel and the status of their transmission is updated
+with progress bars. I made use for RxJS library with this.</p>
 
 <p><img src="assets/images/tukki-en/oletko-varma.png" alt="oletko varma" /></p>
 
@@ -172,23 +223,24 @@ using Angular Material chips.</p>
   </div>
 
   <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:hkaustin@posteo.fi"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#db4437'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fas fa-envelope fa-1x"></i>
     </a><a class="social mx-1"  href="https://www.github.com/nkahe"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#333333'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-github fa-1x"></i>
     </a><a class="social mx-1"  href="https://www.linkedin.com/in/hkaustin"
-       style="color: #6c757d"
+       style="color: #6c757d;font-size: 1.2rem;"
        onMouseOver="this.style.color='#007bb5'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-linkedin-in fa-1x"></i>
     </a>
 
-</div><small id="attribution">
+</div>
+<small id="attribution">
     theme <a href="https://github.com/yousinix/portfolYOU">portfolYOU</a>
   </small>
 
