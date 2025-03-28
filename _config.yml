@@ -5,7 +5,7 @@ description         : >-
                         latest projects under projects -tab.
 baseurl             : "/portfolio"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : nkahe/nkahe.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : YoussefRaafatNasry/portfolYOU
+remote_theme        : yousinix/portfolYOU
 open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -60,8 +60,8 @@ collections:
   pages:
     output: true
     permalink: /pages/:name
-#  elements:                                             # For Documentation Only
-#    output: true                                        # For Documentation Only
+  # elements:                                             # For Documentation Only
+  #   output: true                                        # For Documentation Only
 
 
 ### Disqus ###
