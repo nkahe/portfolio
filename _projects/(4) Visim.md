@@ -37,3 +37,6 @@ Tablet size view.
 ![results](assets/images/visim/puhelin-2-3.webp)
 
 Phone size views.
+
+
+{% include elements/button.html link="#" text="Back to start" block=true %}

@@ -8,7 +8,7 @@ description: Web application for communication between teachers and students.
 ---
 # Front-end of Tukki -ticketing system
 
-[Read this documentation in finnish](1-tukki.html)
+[View this documentation in finnish](1-tukki.html)
 
 This is presentation of the frontend for the Tukki ticketing system I was
 implementing for the Diginet -project. I did it during 14 month period. It has been implemented with
@@ -103,4 +103,4 @@ an editing view for them.
 Edit view for additional fields. The addition of multiple options is implemented
 using Angular Material chips.
 
-<a href="#">Back to beginning</a>
+{% include elements/button.html link="#" text="Back to start" block=true %}

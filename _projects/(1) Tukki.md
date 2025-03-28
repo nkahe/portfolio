@@ -9,7 +9,7 @@ description: Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.
 
 # Tukki -tikettijärjestelmän frontend
 
-[English version of this document](2-tukki-en.html)
+[View this document in English](2-tukki-en.html)
 
 Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
 frontendiä, jota olin toteuttamassa. Tein sitä 14 kk aikana. Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"},
@@ -108,4 +108,5 @@ niiden muokkausnäkymä.
 Lisäkenttien muokkausnäkymä. Monivalintojen lisääminen on toteutettu Angular
 Materialin chipseillä.
 
-<a href="#">Takaisin alkuun</a>
+
+{% include elements/button.html link="#" text="Takaisin alkuun" block=true %}
