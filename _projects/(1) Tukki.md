@@ -1,6 +1,6 @@
 ---
 name: Tukki -tikettijärjestelmä (fi)
-layout: default
+layout: page
 tools: [Angular, TypeScript, HTML, Sass, Jasmine, REST]
 image: assets/images/tukki/lista.png
 description: Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.
@@ -38,13 +38,13 @@ profiilinäkymä, kysymysnäkymien lisäkentät, tietosuojaselosteen sisältö.
 
 Projektin (front-endin) lähdekoodin koko numeroina:
 
-| Kieli      | Tiedostot | Tyhjiä | Kommentteja | Koodia  |
-|------------|-------|-------|---------|-------|
-| TypeScript | 123   | 1508  | 1854    | 10660 |
-| HTML       | 27    | 510   | 74      | 3179  |
-| SCSS       | 38    | 376   | 136     | 1766  |
-| JSON       | 2     | 0     | 0       | 319   |
-| **Yhteensä**   | 190   | 2394  | 2064    | 15924 |
+| Kieli        | Tiedostot | Tyhjiä | Kommentteja | Koodia  |
+| ------------ | --------- | ------ | ----------- | ------- |
+| TypeScript   | 123       | 1508   | 1854        | 10660   |
+| HTML         | 27        | 510    | 74          | 3179    |
+| SCSS         | 38        | 376    | 136         | 1766    |
+| JSON         | 2         | 0      | 0           | 319     |
+| **Yhteensä** | 190       | 2394   | 2064        | 15924   |
 
 
 ## Toteutuksen esittely

@@ -1,6 +1,6 @@
 ---
 name: Visim Physics
-layout: default
+layout: page
 tools: [HTML, CSS, Javascript, Wordpress, Scrum, Kanban ]
 image: assets/images/visim/2.webp
 description: Responsive website for company <i>Visim Physics</i> which allows users to browse and view different physics exercises.

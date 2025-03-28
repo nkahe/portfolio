@@ -1,6 +1,6 @@
 ---
 name: Tukki ticketing system (en)
-layout: default
+layout: page
 tools: [Angular, TypeScript, HTML, Sass, Jasmine, REST]
 image: assets/images/tukki-en//lista.png
 description: Web application for communication between teachers and students. 
@@ -40,7 +40,7 @@ Size of project's (front-end) source code by numbers:
 | HTML       | 27    | 510   | 74      | 3179  |
 | SCSS       | 38    | 376   | 136     | 1766  |
 | JSON       | 2     | 0     | 0       | 319   |
-| **TOTAL**  | 190   | 2394  | 2064    | 15924 |
+| **Total**  | 190   | 2394  | 2064    | 15924 |
 
 ## Demonstration of implementation
 

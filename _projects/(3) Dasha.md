@@ -1,6 +1,6 @@
 ---
 name: Nuohtti
-layout: default
+layout: page
 tools: [HTML, CSS/LESS, Bootstrap, Javascript, jQuery, PHP]
 image: assets/images/dasha/dasha-thumbnail.jpg
 description: Web application to view digitized archival material related to Sámi culture. 

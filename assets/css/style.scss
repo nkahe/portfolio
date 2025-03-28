@@ -1,5 +1,6 @@
 ---
 ---
+
 p, li {
    max-width: 45em;
 }
@@ -7,9 +8,6 @@ p, li {
 .nav-item {
   font-size: 1.1rem;
 }
-
-// This is last.
-@import "portfolYOU";
 
 h5 {
   font-size: 1.4rem;
@@ -48,3 +46,8 @@ th {
     width: 60%;
   }
 }
+
+
+// This is last.
+@import "portfolYOU";
+
