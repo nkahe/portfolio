@@ -2,7 +2,7 @@
 title               : Portfolio
 description         : >-
                         Welcome to my portfolio! You can find my
-                        latest projects under projects -tab.
+                        latest projects under <i>Projects</i> -tab.
 baseurl             : "/portfolio"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : nkahe/nkahe.github.io
 remote_theme        : yousinix/portfolYOU
