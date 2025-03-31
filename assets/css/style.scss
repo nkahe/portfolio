@@ -29,11 +29,11 @@ th {
   border-bottom: 1px solid white;
 }
 
-// @media (min-width: 768px) {
-//   table {
-//     width: 70%;
-//   }
-// }
+@media (min-width: 768px) {
+  table {
+    width: 70%;
+  }
+}
 
 @media (min-width: 992px) {
   table {
@@ -47,7 +47,6 @@ th {
   }
 }
 
-
-// This is last.
+// This was last in documentation.
 @import "portfolYOU";
 
