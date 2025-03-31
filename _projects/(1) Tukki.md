@@ -11,11 +11,11 @@ description: Web-sovellus opettajien ja oppilaiden väliseen kommunikaatioon.
 
 [View this document in English](2-tukki-en.html)
 
-Esittelen tässä Digivertaisverkkohankeessa toteutettua Tukki -tikettijärjestelmän
+Esittelen tässä *Digivertaisverkko* -hankeessa toteutettua Tukki -tikettijärjestelmän
 frontendiä, jota olin toteuttamassa. Tein sitä 14 kk aikana. Frontend on toteutettu [Angularilla](https://angular.io/){:target="_blank" rel="noopener noreferrer"},
-ohjelmointikielenä oli Typescript ja tyylimäärittelyissä Sass/SCSS. Tarkemman tekemäni teknisen kuvauksen
+ohjelmointikielenä oli Typescript ja tyylimäärittelyissä Sass/SCSS. Reaktiivisuuden käsittelyssä hyödynsin tarvittaessa RxJS -kirjastoa perinteisten promiseiden ohella.
 [voi lukea täältä.](https://github.com/nkahe/Tukki-frontend/blob/main/documentation/kuvaus/kuvaus.md){:target="_blank" rel="noopener noreferrer"}
-Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria.
+Siinä on eritelty tarkemmin käytettyjä tekniikoita ja sovelluksen arkkitehtuuria. Sovelluksen backend käyttää Node.JS:ää, tietokantana PostreSQL:ää ja kommunikointi frontendin kanssa tapahtuu REST API:n kautta. Tekstieditorina käytin VS Codea.
 
 Sovelluksen lähdekoodi on avointa ja [nähtävillä Githubissa -repossani](http://github.com/nkahe/Tukki-frontend){:target="_blank" rel="noopener noreferrer"}.
 
@@ -55,53 +55,47 @@ Kysymysten listaus on sovelluksen päänäkymä:
 
 ![kysymyslista](assets/images/tukki/lista.png)
 
-Sovellus on upotettavissa Moodle -oppimisjärjestelmään, tai sitä voidaan käyttää itsenäisenä verkkosovelluksena. Yllä on jälkimmäinen näkymä. Opettajana kirjautuneena näkyvät kaikki kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät vain kaikki hänen lähettämänsä kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät *Usein kysytyt kysymykset*.
+Sovellus on upotettavissa Moodle -oppimisjärjestelmään, tai sitä voidaan käyttää itsenäisenä verkkosovelluksena. Yllä on jälkimmäinen näkymä. Opettajana kirjautuneena näkyvät kaikki kurssin opettajille esitetyt kysymykset. Oppilaalle näkyvät vain kaikki hänen lähettämänsä kysymykset. Kaikille ovat nähtävillä lisäksi opettajien kurssille lähettämät *Usein kysytyt kysymykset* (jatkossa UKK). 
 
-Opettajat saavat halutessaan näkyville ratkaistuiksi asetetut kysymykset.
-
-Sovellulksen komponenteissa on käytetty Angular Material -kirjastoa, jonka ulkonäköä on tarvittaessa muokattu. Osan komponenteissa olen tehnyt itse. Taulukon rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai manuaalisesti.
-
+Taulukko, kuten suurin osa sovelluksen komponenteista, on tehty Angular Material -kirjastoa hyödyntäen, jonka ulkonäköä on tarvittaessa muokattu. Osan komponenteissa olen tehnyt itse. Taulukon rivit voi järjestää eri sarakkeiden mukaan ja niitä voi suodattaa eri kysymysten sisältämien tietojen mukaan. Taulukon sisältö päivittyy minuutin välein tai manuaalisesti.
 
 ![kysymyslista](assets/images/tukki/lista-en.png)
 
 ![kysymyslista](assets/images/tukki/valikko.png)
 
-Sovelluksessa käytetyn kielen voi vaihtaa englanniksi. Käyttäjät voivat tarkastella käyttäjäprofiiliaan ja opettajat voivat muokata kurssin asetuksia.
+Sovelluksessa käytetyn kielen voi vaihtaa englanniksi. Tein tekstin käännökset. Käyttäjät voivat tarkastella käyttäjäprofiiliaan ja opettajat voivat muokata kurssin asetuksia.
 
 ![kysymyslista](assets/images/tukki/login.png)
 
-Moodleen upotettuna kirjautumistieto saadaan Moodlesta. Sen ulkopuolella käytettynä kirjautuminen tehdään ensin manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista <i>authorization code flow</i>:a. Sen jälkeen tunnistautuminen tapahtuu keksillä.
+Moodleen upotettuna kirjautumistieto saadaan sieltä. Sen ulkopuolella käytettynä kirjautuminen tehdään ensin manuaalisesti tunnuksella ja salasanalla. Kirjautumisessa käytetään monivaiheista <i>authorization code flow</i>:a. Sen jälkeen tunnistautuminen tapahtuu saadulla keksillä.
 
 ![uusi kysymys](assets/images/tukki/tiketti.png)
 
 Yksittäisen kysymyksen näkymässä käyttäjä voi tarkastella kysymyksen tietoja.
-Opettaja voi kopioi kysymyksen UKK:ksi tai asettaa sen ratkaistuksi. kysymyksen lähettäjä voi poistaa tai muokata sitä. Opettajat ja opiskelija voivat lisätä
+Opettaja voi kopioi kysymyksen UKK:ksi tai asettaa sen tilan ratkaistuksi. Kysymyksen lähettäjä voi poistaa tai muokata kysymystä. Opettajat ja opiskelija voivat lisätä
 kysymykseen kommentteja, jotka näkyvät kysymyksen alla. Käyttäjät voivat muokata
 omia kommenttejaan.
 
 ![kommentti](assets/images/tukki/kommentti.png)
 
 Kysymyksen ja kommentin yhteydessä näkyy lähettäjän nimi, rooli, avatar-ikoni ja
-kommentin lähettämis- ja muokkaamispäivämäärä.
-
-Kommenttia muokatessa sen voi poistaa, muuttaa kommentin tai tekstin tilaa sekä
-lisätä tai poistaa liitteitä. Liite -komponentin tein itse. Liitteitä voi lisätä useita, ja niiden lähettäminen tapahtuu rinnakkaisesti näyttäen tiedostoille edistymispalkit. Siinä hyödynnetään observablien käytössä RxJS -kirjastoa.
+kommentin lähettämis- ja muokkaamispäivämäärä. Tein tämän komponentin itse. Kommenttia muokatessa sen voi poistaa, muuttaa kommentin tai tekstin tilaa sekä
+lisätä tai poistaa liitteitä. Tein liitteiden näkymä- ja lähettämiskomponentit itse.
 
 ![kommentti](assets/images/tukki/progress-bar.png)
 
 Tiedostoja voi lisätä useita, ne lähetetään rinnakkain ja niiden lähetyksen tila
-päivitetään edistymispalkeilla. Tässä on hyödynnetty RxJS -kirjastoa.
+päivitetään edistymispalkeilla, ja niiden lähettäminen voidaan halutessa keskeyttää.
 
 ![oletko varma](assets/images/tukki/oletko-varma.png)
 
-Uuden UKK:n lisäämisen näkymä. Tässä käyttäjä on painanut "Alkuun" -nappi kesken muokkauksen, jolloin kysytään varmistusta. Lomakkeiden validointiin on käytetty Angular Reactive Forms:a.
+Uuden UKK:n lisäämisen näkymä. Tässä käyttäjä on painanut "Alkuun" -nappi kesken muokkauksen, jolloin kysytään varmistusta. Lomakkeiden validointiin on käytetty *Angular Reactive Forms*:a.
 
 ![asetukset](assets/images/tukki/asetukset.png)
 
 Kurssilla olevata opettajat voivat muuttaa kurssin asetuksia, ladata ja lisätä
-usein kysyttyjä kysymyksiä sekä kurssin asetuksia ja kutstua ulkopuolisia
-osallistumaan kurssille. Lisäkenttien editointi-ikonia valitsemalla avautuu
-niiden muokkausnäkymä.
+usein kysyttyjä kysymyksiä sekä kurssin asetuksiax JSON -tiedostoina seka kutsua ulkopuolisia osallistumaan kurssille. Lisäkenttien editointi-ikonia valitsemalla avautuu
+niiden muokkausnäkymä (alla).
 
 ![asetukset](assets/images/tukki/lisäkenttä.png)
 
