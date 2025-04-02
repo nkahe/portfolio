@@ -100,4 +100,6 @@ an editing view for them (below).
 Edit view for additional fields. The addition of multiple options is implemented
 using Angular Material chips.
 
+I made about 100 units test for frontend using Jasmine framework.
+
 {% include elements/button.html link="#" text="Back to start" block=true %}

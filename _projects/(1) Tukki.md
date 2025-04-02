@@ -102,5 +102,6 @@ niiden muokkausnäkymä (alla).
 Lisäkenttien muokkausnäkymä. Monivalintojen lisääminen on toteutettu Angular
 Materialin chipseillä.
 
+Tein frontendille noin 100 yksikkötestiä käyttäen Jasmine frameworkia.
 
 {% include elements/button.html link="#" text="Takaisin alkuun" block=true %}
