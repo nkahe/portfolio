@@ -1,5 +1,5 @@
 ### Site Settings ###
-title               : Portfolio
+title               : Henri's portfolio
 description         : >-
                         Welcome to my portfolio! You can find my
                         latest projects under <i>Projects</i> -tab.
@@ -27,8 +27,6 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : Henri Kaustinen
   image             : https://raw.githubusercontent.com/nkahe/portfolio/refs/heads/main/assets/img/author.jpg
-  # image             : assets/img/author.jpg
-# image             : https://i.imgur.com/uyDNQnn.jpg
 # behance           : your_username
 # dribbble          : your_username
   email             : hkaustin@posteo.fi
