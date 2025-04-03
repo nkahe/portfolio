@@ -7,13 +7,12 @@ weight: 3
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** <br>
+Hi I am **{{ site.author.name }}**. <br>
 
 I'm Business Information Systems tradenom and looking for a job in software
 development. I have most experience in making user interfaces in context of web
-front-end development. I've background in technology oriented primary teacher
-education. I'm long time Linux fan but experience on working in different
-environments.
+front-end development. I also got degree in technology oriented primary teacher
+education. I'm long time Linux and open source enthusiast.
 
 Skills percentages mainly reflect how much time I've spent learning and using
 different skills.
